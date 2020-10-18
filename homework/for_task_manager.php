@@ -1,4 +1,5 @@
 <?php
+
 $taskManager = ['new website' =>[
     'task ID' => 3254,
     'task title' => 'website for shop',
@@ -26,8 +27,9 @@ $taskManager = ['new website' =>[
 ];
     print_r($taskManager);
 
-foreach($taskManager as $pointer => $massiv){
-    foreach ($massiv as $inner_key => $value){
-        echo "{$pointer}: {$inner_key} => $value", PHP_EOL;
+    for ($column = $taskManager; $column <= 3; $column ++){
+        for($row = 0; $row <=6; $row ++){
+            echo "$column =>>>$row",    PHP_EOL;
+        }
+        echo PHP_EOL;
     }
-}
