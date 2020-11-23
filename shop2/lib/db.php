@@ -1,6 +1,6 @@
 <?php
-$dbConnection = null;
 
+$dbConnection = null;
 /**
  * @param array $config
  */
@@ -16,9 +16,9 @@ function setDb(array $config)
     );
 
     if (!$dbConnection) {
-        echo "Ошибка: Невозможно установить соединение с MySQL." . PHP_EOL;
-        echo "Код ошибки errno: " . mysqli_connect_errno() . PHP_EOL;
-        echo "Текст ошибки error: " . mysqli_connect_error() . PHP_EOL;
+        echo "Error: Unable to connect to MySQL." . PHP_EOL;
+        echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+        echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
         exit;
     }
 }
@@ -26,13 +26,15 @@ function setDb(array $config)
 /**
  * @return mysqli
  */
+
 function getDb(): mysqli
 {
     global $dbConnection;
 
-    if ($dbConnection === null) {
-        exit('DB connection is lost');
+    if($dbConnection === null){
+        exit('DB conection is lost');
     }
-
-    return $dbConnection;
+return $dbConnection;
 }
+
+

@@ -1,13 +1,11 @@
-
 <?php
-
 /**
  * @param array $data
  * @return bool
  */
-function createCategory(array $data)
+function createCategory(array $data): bool
 {
-    $sql = 'INSERT INTO categories (title, parent_category_id) VALUES (?, ?)';
+    $sql = 'INSERT INTO categories (title, parent_category_id) VALUE(?, ?)';
     $stmt = mysqli_prepare(getDb(), $sql);
     mysqli_stmt_bind_param($stmt, 'si', $data['title'], $data['parent_category_id']);
     return mysqli_stmt_execute($stmt);
@@ -16,7 +14,8 @@ function createCategory(array $data)
 /**
  * @return array
  */
-function getCategories()
+
+function getCategories(): array
 {
     $sql = 'SELECT * FROM categories';
     $stmt = mysqli_prepare(getDb(), $sql);

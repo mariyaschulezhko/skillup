@@ -1,12 +1,11 @@
 <?php
-
 return [
     'baseDir' => __DIR__,
-    'webRout' =>'/shop',
+    'webRout' =>'/shop2',
     'db' => [
         'host' => 'zj406228.mysql.tools',
         'user' => 'zj406228_skillupshop',
-        'password' => '!F~mmnF324',
+        'password' => '9&_xRii3F7',
         'db' => 'zj406228_skillupshop',
     ],
 ];
