@@ -1,5 +1,5 @@
 <?php
-
+password_hash()
 return[
     'baseDir' => __DIR__ .'/storage',
     'webRout' => '/files2/storage',

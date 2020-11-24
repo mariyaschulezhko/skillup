@@ -1,5 +1,6 @@
 <?php
-
+require_once __DIR__ .'/../security.php';
+require_once  __DIR__ . '/../auth.php';
 $dbConnection = null;
 /**
  * @param array $config
@@ -14,6 +15,7 @@ function setDb(array $config)
         $config['db']['password'],
         $config['db']['db']
     );
+
 
     if (!$dbConnection) {
         echo "Error: Unable to connect to MySQL." . PHP_EOL;
@@ -32,7 +34,7 @@ function getDb(): mysqli
     global $dbConnection;
 
     if($dbConnection === null){
-        exit('DB conection is lost');
+        exit('DB connection is lost');
     }
 return $dbConnection;
 }

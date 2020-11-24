@@ -1,8 +1,11 @@
 <?php
 require_once __DIR__ . '/../models/categories.php';
+require_once __DIR__ .'/../security.php';
+require_once __DIR__ . '/../auth.php';
+
+
 function actionShowAll()
 {
-
 
 $categories = getCategories();
 var_dump($categories);

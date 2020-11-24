@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ .'/../security.php';
+require_once __DIR__ .'/../auth.php';
 /**
  * @param string $url
  * @param array $config
@@ -8,6 +10,7 @@ function dispatch(string $url, array $config )
     $parts = prepareParts($url, $config);
 
     $file = $config['baseDir'] . '/controllers/' . array_shift($parts) . '.php';
+
 
 if(!file_exists($file)){
     exit("Controller doesn't exists");

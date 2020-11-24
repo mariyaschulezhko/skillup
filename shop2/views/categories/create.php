@@ -1,5 +1,3 @@
-
-
 <form action="" method="post">
     <div>
         <label for="title">Title</label>
@@ -15,4 +13,4 @@
         </select>
     </div>
     <input type="submit" value="Save">
-</form>
+</form
